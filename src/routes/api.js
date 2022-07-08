@@ -1,8 +1,8 @@
 const express = require('express')
 const api = express.Router()
 
-const sampleRouter = require('./sample/sample.router')
+const sampleRouter = require('./split-payments/compute.router')
 
-api.use('/', sampleRouter)
+api.use('/split-payments', sampleRouter)
 
 module.exports = api
