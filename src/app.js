@@ -10,5 +10,8 @@ app.use(cors({
 app.use(morgan('combined'));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
+app.get('/', (req, res) => res.status(200).send({
+  message: 'lannister api',
+}));
 app.use('/v1', api);
 module.exports = app;
